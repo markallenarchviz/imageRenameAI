@@ -168,7 +168,7 @@ func processImages(inputFolder string, progressBar *widgets.QProgressBar, mainWi
 		if err != nil {
 			return err
 		}
-		if !info.IsDir() && filepath.Ext(info.Name()) == ".jpg" || ".jpeg" || ".png" {
+		if !info.IsDir() && filepath.Ext(info.Name()) == ".jpeg"{
 			totalImages++
 		}
 		return nil
@@ -179,7 +179,7 @@ func processImages(inputFolder string, progressBar *widgets.QProgressBar, mainWi
 		if err != nil {
 			return err
 		}
-		if !info.IsDir() && filepath.Ext(info.Name()) == ".jpg" || ".jpeg" || ".png"{
+		if !info.IsDir() && filepath.Ext(info.Name()) == ".jpeg"{
 			ocrResponse, err := ocrSpaceFile(path, false, "K81163354788957", "pol", "2")
 			if err != nil {
 				return err
